@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pagina non trovata | B&amp;B Fiori e Limoni</title>
+<meta name="description" content="La pagina cercata non esiste. Torna alla pagina iniziale del B&amp;B Fiori e Limoni, Quartucciu.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#153a4f">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root{
+  --cream:#fdfaf2; --sand:#f5edde; --paper:#ffffff;
+  --ink:#20262b; --ink-2:#4c5661; --ink-3:#77828d;
+  --blu:#153a4f; --blu-2:#2b7599; --blu-soft:#e6f0f5;
+  --lemon:#e2a915; --lemon-2:#f2c94c; --lemon-soft:#fdf3d8;
+  --line:rgba(21,58,79,.13);
+  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --sans:'Poppins',system-ui,-apple-system,sans-serif;
+  --shadow:0 18px 50px -22px rgba(21,58,79,.35);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;background:var(--cream);color:var(--ink);
+  font-family:var(--sans);font-weight:300;line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  display:flex;flex-direction:column;overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block;height:auto}
+:focus-visible{outline:2px solid var(--blu-2);outline-offset:3px;border-radius:4px}
+.ico{width:20px;height:20px;flex:0 0 auto;stroke:currentColor;stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.wrap{max-width:1200px;margin:0 auto;padding:0 clamp(18px,4vw,40px);width:100%}
+
+header{background:rgba(253,250,242,.93);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;height:72px}
+.brand{display:flex;align-items:center;gap:11px;min-width:0}
+.brand img{width:38px;height:38px;border-radius:8px}
+.brand b{font-family:var(--serif);font-size:1.28rem;font-weight:600;letter-spacing:-.01em;white-space:nowrap}
+.brand i{display:block;font-style:normal;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--blu-2);font-weight:500}
+.torna{margin-left:auto;font-size:.82rem;color:var(--ink-2)}
+.torna:hover{color:var(--blu)}
+
+main{flex:1;display:flex;align-items:center;padding:clamp(48px,9vw,110px) 0}
+.centro{max-width:640px}
+.numero{
+  font-family:var(--serif);font-weight:600;line-height:.9;
+  font-size:clamp(5.5rem,4rem + 12vw,11rem);
+  color:var(--blu);letter-spacing:-.03em;margin:0;
+  position:relative;display:inline-block;
+}
+.numero::after{
+  content:"";position:absolute;left:.06em;right:.06em;bottom:.14em;height:.09em;
+  background:var(--lemon-2);border-radius:99px;z-index:-1;
+}
+h1{
+  font-family:var(--serif);font-weight:600;letter-spacing:-.015em;
+  font-size:clamp(1.7rem,1.2rem + 2vw,2.6rem);line-height:1.15;
+  margin:clamp(10px,2vw,18px) 0 14px;
+}
+p{margin:0 0 14px;color:var(--ink-2);max-width:52ch}
+p.en{color:var(--ink-3);font-size:.92rem;font-style:italic}
+.azioni{display:flex;flex-wrap:wrap;gap:10px;margin-top:clamp(20px,3vw,30px)}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:13px 22px;border-radius:999px;border:1px solid transparent;
+  font-size:.88rem;font-weight:500;
+  transition:transform .2s,background .2s,color .2s,border-color .2s,box-shadow .2s;
+}
+.btn-primary{background:var(--blu);color:#fff;box-shadow:var(--shadow)}
+.btn-primary:hover{background:var(--blu-2);transform:translateY(-2px)}
+.btn-ghost{border-color:var(--line);background:var(--paper);color:var(--blu)}
+.btn-ghost:hover{border-color:var(--blu-2);color:var(--blu-2);transform:translateY(-2px)}
+
+footer{border-top:1px solid var(--line);background:var(--sand);padding:26px 0;font-size:.82rem;color:var(--ink-3)}
+footer a{color:var(--ink-2)}
+footer a:hover{color:var(--blu)}
+
+@media (prefers-reduced-motion:reduce){*{transition-duration:.001ms !important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <img src="apple-touch-icon.png" alt="" width="38" height="38">
+      <span>
+        <b>Fiori e Limoni</b>
+        <i>Bed and Breakfast &middot; Quartucciu</i>
+      </span>
+    </a>
+    <a class="torna" href="index.html">Torna alla pagina iniziale</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="centro">
+      <p class="numero">404</p>
+      <h1>Questa pagina non c&rsquo;&egrave;</h1>
+      <p>Forse l&rsquo;indirizzo &egrave; stato copiato male, oppure la pagina &egrave; stata spostata. Dalla pagina iniziale trovi le camere, le tariffe e come arrivare.</p>
+      <p class="en">This page does not exist. The address may have been mistyped, or the page has moved. From the home page you will find the rooms, the rates and how to reach us.</p>
+      <div class="azioni">
+        <a class="btn btn-primary" href="index.html">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+          Vai alla pagina iniziale
+        </a>
+        <a class="btn btn-ghost" href="tel:+393498474587">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.1 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+          349 847 4587
+        </a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    B&amp;B Fiori e Limoni &middot; Via Quartu 79, Quartucciu (CA) &middot;
+    <a href="index.html">Pagina iniziale</a> &middot;
+    <a href="privacy.html">Informativa privacy</a>
+  </div>
+</footer>
+
+</body>
+</html>
