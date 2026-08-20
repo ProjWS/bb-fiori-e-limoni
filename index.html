@@ -53,8 +53,7 @@
     { "@type": "LocationFeatureSpecification", "name": "Bagno privato in camera", "value": true },
     { "@type": "LocationFeatureSpecification", "name": "Camera accessibile ai disabili", "value": true },
     { "@type": "LocationFeatureSpecification", "name": "Giardino e cortile", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Parcheggio libero nelle vicinanze", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Biciclette a disposizione", "value": true }
+    { "@type": "LocationFeatureSpecification", "name": "Parcheggio libero nelle vicinanze", "value": true }
   ],
   "sameAs": ["https://www.facebook.com/bbfiorielimoni/"]
 }
@@ -295,6 +294,21 @@ section{padding:clamp(52px,8vw,104px) 0}
 .dist-list b{font-weight:500;color:var(--blu);white-space:nowrap}
 @media(max-width:520px){.dist-list{grid-template-columns:1fr}}
 
+/* ---------- convenzione traghetti ---------- */
+.ferry{display:grid;grid-template-columns:auto 1fr auto;gap:clamp(14px,2vw,24px);align-items:center;background:var(--paper);border:1px solid var(--line-2);border-left:3px solid var(--lemon);border-radius:16px;padding:clamp(18px,2.4vw,26px);box-shadow:var(--shadow-s);margin-top:clamp(24px,3.4vw,38px)}
+.ferry-img{display:block;width:200px;flex:none;border-radius:10px;overflow:hidden;border:1px solid var(--line-2);line-height:0;transition:transform .2s,box-shadow .2s}
+.ferry-img:hover{transform:translateY(-2px);box-shadow:var(--shadow-s)}
+.ferry-img img{width:100%;height:auto}
+.ferry-body h4{font-size:1.3rem;margin-bottom:8px}
+.ferry-body p{font-size:.88rem;color:var(--ink-2);line-height:1.65}
+.ferry-note{margin-top:8px;font-size:.8rem!important;color:var(--ink-3)!important}
+.ferry-cta{white-space:nowrap}
+@media(max-width:820px){
+  .ferry{grid-template-columns:1fr}
+  .ferry-img{width:100%;max-width:280px}
+  .ferry-cta{justify-self:start;margin-top:4px}
+}
+
 /* ---------- galleria ---------- */
 .gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
 .gal button{border:0;padding:0;background:var(--sand-2);border-radius:12px;overflow:hidden;cursor:zoom-in;aspect-ratio:4/3;position:relative}
@@ -411,7 +425,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
     <div>
       <span class="eyebrow" data-it="Quartucciu · Cagliari · Sardegna" data-en="Quartucciu · Cagliari · Sardinia">Quartucciu · Cagliari · Sardegna</span>
       <h1><span data-it="All'ombra dei" data-en="In the shade of the">All'ombra dei</span> <em data-it="limoni" data-en="lemon trees">limoni</em></h1>
-      <p class="lead" data-it="Una casa campidanese di fine Ottocento, due camere con bagno privato e un cortile giardino dove si fa colazione al sole. A dieci minuti dalla spiaggia del Poetto e dal centro di Cagliari." data-en="A late nineteenth century Campidano house, two en suite rooms and a garden courtyard where breakfast is served in the sun. Ten minutes from Poetto beach and from the centre of Cagliari.">Una casa campidanese di fine Ottocento, due camere con bagno privato e un cortile giardino dove si fa colazione al sole. A dieci minuti dalla spiaggia del Poetto e dal centro di Cagliari.</p>
+      <p class="lead" data-it="Una casa campidanese di fine Ottocento, due camere con bagno privato e un cortile giardino dove si fa colazione al sole. A dieci minuti dalla spiaggia del Poetto e dal centro di Cagliari." data-en="A late nineteenth century Campidano house, two en suite rooms and a garden courtyard where you can have breakfast in the sun. Ten minutes from Poetto beach and from the centre of Cagliari.">Una casa campidanese di fine Ottocento, due camere con bagno privato e un cortile giardino dove si fa colazione al sole. A dieci minuti dalla spiaggia del Poetto e dal centro di Cagliari.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#contatti">
           <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v3M16 2v3M3.5 9h17M5 5.5h14a1.5 1.5 0 0 1 1.5 1.5v12A1.5 1.5 0 0 1 19 20.5H5A1.5 1.5 0 0 1 3.5 19V7A1.5 1.5 0 0 1 5 5.5Z"/></svg>
@@ -441,7 +455,6 @@ html:not(.js) .reveal{opacity:1;transform:none}
     <div><svg class="ico ico-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19h13a3 3 0 0 0 0-6h-1M4 19V8h12v5M6 5V3M9 5V3M12 5V3M18 19h2"/></svg><span data-it="Colazione inclusa" data-en="Breakfast included">Colazione inclusa</span></div>
     <div><svg class="ico ico-s" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4.2" r="1.8"/><path d="M9 8.5h6M10.5 8v5h5M10.5 13c-1.5 3-.5 7 3 7 2 0 3.3-1.3 3.8-3"/></svg><span data-it="Camera accessibile" data-en="Accessible room">Camera accessibile</span></div>
     <div><svg class="ico ico-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21v-7M12 14c0-4 3-7 7-7 0 4-3 7-7 7ZM12 14c0-4-3-7-7-7 0 4 3 7 7 7Z"/></svg><span data-it="Giardino e cortile" data-en="Garden and courtyard">Giardino e cortile</span></div>
-    <div><svg class="ico ico-s" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="17" r="3.2"/><circle cx="18" cy="17" r="3.2"/><path d="M9 17h4l3-8M11 9h4M14 9l-2.5 8"/></svg><span data-it="Biciclette a disposizione" data-en="Bicycles available">Biciclette a disposizione</span></div>
     <div><svg class="ico ico-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v6M3 13h18v5H3zM7 18v2M17 18v2"/></svg><span data-it="Parcheggio libero" data-en="Free parking nearby">Parcheggio libero</span></div>
     <div><svg class="ico ico-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8.5a15 15 0 0 1 20 0M5 12a10 10 0 0 1 14 0M8.5 15.5a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r=".7"/></svg><span data-it="Wi-Fi gratuito" data-en="Free Wi-Fi">Wi-Fi gratuito</span></div>
   </div>
@@ -454,13 +467,13 @@ html:not(.js) .reveal{opacity:1;transform:none}
       <span class="kicker" data-it="Il Bed and Breakfast" data-en="The Bed and Breakfast">Il Bed and Breakfast</span>
       <h2 style="font-size:clamp(2rem,4.4vw,3rem);margin-bottom:18px"><span data-it="Una casa di famiglia," data-en="A family home,">Una casa di famiglia,</span> <em style="font-style:italic;color:var(--blu-2);font-weight:400" data-it="non un albergo" data-en="not a hotel">non un albergo</em></h2>
       <p data-it="Il B&amp;B Fiori e Limoni nasce dalla ristrutturazione attenta di un'antica casa campidanese di fine Ottocento, nel centro storico di Quartucciu, a due passi dalla chiesa di San Giorgio Martire. La casa si affaccia sul cortile giardino interno: oggi come allora, il luogo dove ci si incontra e si chiacchiera." data-en="B&amp;B Fiori e Limoni was created through the careful restoration of a late nineteenth century Campidano house, in the old town of Quartucciu, a short walk from the church of San Giorgio Martire. The house opens onto its inner garden courtyard: today as in the past, the place where people meet and talk.">Il B&amp;B Fiori e Limoni nasce dalla ristrutturazione attenta di un'antica casa campidanese di fine Ottocento, nel centro storico di Quartucciu, a due passi dalla chiesa di San Giorgio Martire. La casa si affaccia sul cortile giardino interno: oggi come allora, il luogo dove ci si incontra e si chiacchiera.</p>
-      <p data-it="D'inverno l'ampio soggiorno accoglie gli ospiti attorno al fuoco dell'antico camino. Nella bella stagione ci si sposta fuori, tra i profumi e i colori del giardino fiorito, sotto il gazebo o all'ombra degli alberi di limone." data-en="In winter the large living room welcomes guests around the fire of the old fireplace. In the warm season life moves outside, among the scents and colours of the flowering garden, under the gazebo or in the shade of the lemon trees.">D'inverno l'ampio soggiorno accoglie gli ospiti attorno al fuoco dell'antico camino. Nella bella stagione ci si sposta fuori, tra i profumi e i colori del giardino fiorito, sotto il gazebo o all'ombra degli alberi di limone.</p>
+      <p data-it="La vita della casa si svolge fuori, tra i profumi e i colori del giardino fiorito, sotto il gazebo o all'ombra degli alberi di limone, ai tavolini all'aperto." data-en="Life here happens outside, among the scents and colours of the flowering garden, under the gazebo or in the shade of the lemon trees, at the tables in the open air.">La vita della casa si svolge fuori, tra i profumi e i colori del giardino fiorito, sotto il gazebo o all'ombra degli alberi di limone, ai tavolini all'aperto.</p>
       <p data-it="Qui non si dorme in una stanza qualsiasi: si entra in una casa sarda, con l'accoglienza che ne fa parte. Lontano dal rumore del traffico, ma a pochi minuti dal mare, dalla città e dall'aeroporto." data-en="This is not just a room to sleep in: it is a Sardinian home, with the welcome that comes with it. Away from traffic noise, yet a few minutes from the sea, the city and the airport.">Qui non si dorme in una stanza qualsiasi: si entra in una casa sarda, con l'accoglienza che ne fa parte. Lontano dal rumore del traffico, ma a pochi minuti dal mare, dalla città e dall'aeroporto.</p>
       <p data-it="Sarà un piacere darvi tutte le informazioni che vi servono: mappe della città, orari dei bus, consigli sulle spiagge e su dove mangiare." data-en="We are always glad to give you all the information you need: town maps, bus timetables, tips on beaches and places to eat.">Sarà un piacere darvi tutte le informazioni che vi servono: mappe della città, orari dei bus, consigli sulle spiagge e su dove mangiare.</p>
     </div>
     <div class="collage reveal">
       <figure class="tall"><img src="images/androne.webp" alt="L'androne d'ingresso della casa campidanese con le piante in vaso" width="900" height="600" loading="lazy"></figure>
-      <figure class="sq"><img src="images/soggiorno.webp" alt="Il soggiorno comune con il camino e il tavolo da pranzo" width="800" height="532" loading="lazy"></figure>
+      <figure class="sq"><img src="images/giardino-tavolini.webp" alt="I tavolini del giardino fra le piante fiorite, all'ombra dell'ombrellone" width="900" height="600" loading="lazy"></figure>
       <figure class="sq"><img src="images/targa-79.webp" alt="La targa in ceramica con il numero 79 e il sole all'ingresso" width="900" height="600" loading="lazy"></figure>
     </div>
   </div>
@@ -472,7 +485,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
     <div class="sec-head center reveal">
       <span class="kicker" data-it="Dove dormirete" data-en="Where you sleep">Dove dormirete</span>
       <h2><span data-it="Due camere," data-en="Two rooms,">Due camere,</span> <em data-it="il cielo e il sole" data-en="the sky and the sun">il cielo e il sole</em></h2>
-      <p data-it="Completamente ristrutturate, entrambe con bagno privato, aria condizionata, TV a schermo piatto, asciugacapelli e set di cortesia. La colazione si può fare in giardino con gli altri ospiti oppure in privato, come preferite." data-en="Fully renovated, both with private bathroom, air conditioning, flat screen TV, hairdryer and courtesy set. Breakfast can be shared in the garden or served in private, as you prefer.">Completamente ristrutturate, entrambe con bagno privato, aria condizionata, TV a schermo piatto, asciugacapelli e set di cortesia. La colazione si può fare in giardino con gli altri ospiti oppure in privato, come preferite.</p>
+      <p data-it="Completamente ristrutturate, entrambe con bagno privato, aria condizionata, asciugacapelli e set di cortesia. La colazione si fa nell'anticamera, oppure ai tavolini del giardino, come preferite." data-en="Fully renovated, both with private bathroom, air conditioning, hairdryer and courtesy set. Breakfast is in the anteroom, or at the tables in the garden, as you prefer.">Completamente ristrutturate, entrambe con bagno privato, aria condizionata, asciugacapelli e set di cortesia. La colazione si fa nell'anticamera, oppure ai tavolini del giardino, come preferite.</p>
     </div>
 
     <div class="rooms">
@@ -488,7 +501,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
             <li><svg class="ico ico-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6v12M4 10h16v8M20 18v-6a3 3 0 0 0-3-3h-5v4"/></svg><span data-it="Letto matrimoniale" data-en="Double bed">Letto matrimoniale</span></li>
             <li><svg class="ico ico-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-3ZM7 13V6a2 2 0 0 1 4 0v.5M17 20v1M7 20v1"/></svg><span data-it="Bagno privato con doccia" data-en="Private bathroom, shower">Bagno privato con doccia</span></li>
             <li><svg class="ico ico-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v7H3zM6 16c1.5 0 1.5 2 3 2M13 16c1.5 0 1.5 2 3 2"/></svg><span data-it="Aria condizionata" data-en="Air conditioning">Aria condizionata</span></li>
-            <li><svg class="ico ico-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v11H3zM9 20h6M12 16v4"/></svg><span data-it="TV a schermo piatto" data-en="Flat screen TV">TV a schermo piatto</span></li>
+            
             <li><svg class="ico ico-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8.5a15 15 0 0 1 20 0M5 12a10 10 0 0 1 14 0M8.5 15.5a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r=".7"/></svg><span data-it="Wi-Fi gratuito" data-en="Free Wi-Fi">Wi-Fi gratuito</span></li>
             <li><svg class="ico ico-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h9a4 4 0 0 0 0-8H9M5 12v7M5 12H3M12 12v3"/></svg><span data-it="Asciugacapelli e set cortesia" data-en="Hairdryer and courtesy set">Asciugacapelli e set cortesia</span></li>
           </ul>
@@ -507,7 +520,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
             <li><svg class="ico ico-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6v12M4 10h16v8M20 18v-6a3 3 0 0 0-3-3h-5v4"/></svg><span data-it="Matrimoniale, terzo letto su richiesta" data-en="Double, third bed on request">Matrimoniale, terzo letto su richiesta</span></li>
             <li><svg class="ico ico-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-3ZM7 13V6a2 2 0 0 1 4 0v.5M17 20v1M7 20v1"/></svg><span data-it="Bagno privato con doccia" data-en="Private bathroom, shower">Bagno privato con doccia</span></li>
             <li><svg class="ico ico-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v7H3zM6 16c1.5 0 1.5 2 3 2M13 16c1.5 0 1.5 2 3 2"/></svg><span data-it="Aria condizionata" data-en="Air conditioning">Aria condizionata</span></li>
-            <li><svg class="ico ico-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v11H3zM9 20h6M12 16v4"/></svg><span data-it="TV a schermo piatto" data-en="Flat screen TV">TV a schermo piatto</span></li>
+            
             <li><svg class="ico ico-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8.5a15 15 0 0 1 20 0M5 12a10 10 0 0 1 14 0M8.5 15.5a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r=".7"/></svg><span data-it="Wi-Fi gratuito" data-en="Free Wi-Fi">Wi-Fi gratuito</span></li>
             <li><svg class="ico ico-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v3M12 18v3M4.2 7.5l2.6 1.5M17.2 15l2.6 1.5M4.2 16.5l2.6-1.5M17.2 9l2.6-1.5"/><circle cx="12" cy="12" r="3.2"/></svg><span data-it="Culla gratuita su richiesta" data-en="Free cot on request">Culla gratuita su richiesta</span></li>
           </ul>
@@ -535,10 +548,9 @@ html:not(.js) .reveal{opacity:1;transform:none}
     </div>
     <div class="prose reveal">
       <span class="kicker" data-it="La colazione" data-en="Breakfast">La colazione</span>
-      <h2 style="font-size:clamp(2rem,4.4vw,3rem);margin-bottom:18px"><span data-it="Si comincia" data-en="The day starts">Si comincia</span> <em style="font-style:italic;color:var(--blu-2);font-weight:400" data-it="dal cortile" data-en="in the courtyard">dal cortile</em></h2>
-      <p data-it="La colazione è servita dalle 8:00 alle 10:00. Nella bella stagione si apparecchia sotto il gazebo, in mezzo alle piante; d'inverno dentro casa, al caldo." data-en="Breakfast is served from 8:00 to 10:00. In the warm season the table is set under the gazebo, among the plants; in winter indoors, in the warm.">La colazione è servita dalle 8:00 alle 10:00. Nella bella stagione si apparecchia sotto il gazebo, in mezzo alle piante; d'inverno dentro casa, al caldo.</p>
+      <h2 style="font-size:clamp(2rem,4.4vw,3rem);margin-bottom:18px"><span data-it="Si comincia" data-en="The day starts">Si comincia</span> <em style="font-style:italic;color:var(--blu-2);font-weight:400" data-it="senza fretta" data-en="without rushing">senza fretta</em></h2>
+      <p data-it="La colazione si fa nell'anticamera, dalle 8:00 alle 10:00. Chi preferisce può spostarsi ai tavolini del giardino, in mezzo alle piante." data-en="Breakfast is in the anteroom, from 8:00 to 10:00. If you prefer, you can move to the tables in the garden, among the plants.">La colazione si fa nell'anticamera, dalle 8:00 alle 10:00. Chi preferisce può spostarsi ai tavolini del giardino, in mezzo alle piante.</p>
       <p data-it="Caffè, latte e tè, pane, dolci, frutta di stagione e le marmellate di casa, agrumi compresi: i limoni sono quelli del giardino." data-en="Coffee, milk and tea, bread, cakes, seasonal fruit and homemade jams, citrus included: the lemons come from the garden.">Caffè, latte e tè, pane, dolci, frutta di stagione e le marmellate di casa, agrumi compresi: i limoni sono quelli del giardino.</p>
-      <p data-it="Chi preferisce può fare colazione in privato, senza incrociare nessuno. Basta dirlo la sera prima." data-en="If you prefer, breakfast can be served in private, without meeting anyone. Just let us know the evening before.">Chi preferisce può fare colazione in privato, senza incrociare nessuno. Basta dirlo la sera prima.</p>
       <p data-it="Per chi parte presto verso l'aeroporto o il porto, ci si organizza: ditecelo all'arrivo." data-en="For guests leaving early for the airport or the port we can arrange something: just tell us on arrival.">Per chi parte presto verso l'aeroporto o il porto, ci si organizza: ditecelo all'arrivo.</p>
     </div>
   </div>
@@ -579,11 +591,9 @@ html:not(.js) .reveal{opacity:1;transform:none}
           <li><span data-it="Culla" data-en="Cot">Culla</span><b data-it="gratis" data-en="free">gratis</b></li>
           <li><span data-it="Asciugacapelli in camera" data-en="Hairdryer in the room">Asciugacapelli in camera</span><b data-it="gratis" data-en="free">gratis</b></li>
           <li><span data-it="Ombrellone per il mare" data-en="Beach umbrella">Ombrellone per il mare</span><b data-it="gratis" data-en="free">gratis</b></li>
-          <li><span data-it="Biciclette per il lungomare" data-en="Bicycles for the seafront">Biciclette per il lungomare</span><b data-it="gratis" data-en="free">gratis</b></li>
           <li><span data-it="Deposito bagagli" data-en="Luggage storage">Deposito bagagli</span><b data-it="gratis" data-en="free">gratis</b></li>
           <li><span data-it="Parcheggio nelle vicinanze" data-en="Parking nearby">Parcheggio nelle vicinanze</span><b data-it="libero" data-en="free street">libero</b></li>
           <li><span data-it="Terzo letto, dai 4 anni" data-en="Third bed, from age 4">Terzo letto, dai 4 anni</span><b class="pay">15 €</b></li>
-          <li><span data-it="Servizio baby sitter" data-en="Baby sitting service">Servizio baby sitter</span><b class="pay" data-it="a tariffa" data-en="on request">a tariffa</b></li>
         </ul>
       </div>
     </div>
@@ -716,6 +726,18 @@ html:not(.js) .reveal{opacity:1;transform:none}
         </ul>
       </div>
     </div>
+
+      <div class="ferry reveal">
+        <a class="ferry-img" href="https://traghettilines.it/sc/bbgottardoit" target="_blank" rel="noopener sponsored" tabindex="-1" aria-hidden="true">
+          <img src="images/traghettilines-convenzione.webp" alt="" width="336" height="280" loading="lazy">
+        </a>
+        <div class="ferry-body">
+          <h4 data-it="Arrivate in traghetto?" data-en="Arriving by ferry?">Arrivate in traghetto?</h4>
+          <p data-it="Abbiamo una convenzione con Traghettilines, il portale che confronta i prezzi di tutte le compagnie che collegano la Sardegna. Da qui si accede alle tariffe agevolate riservate ai nostri ospiti, senza nessun codice da inserire." data-en="We have an agreement with Traghettilines, the portal that compares the prices of every company sailing to Sardinia. From here you reach the reduced fares reserved for our guests, with no code to enter.">Abbiamo una convenzione con Traghettilines, il portale che confronta i prezzi di tutte le compagnie che collegano la Sardegna. Da qui si accede alle tariffe agevolate riservate ai nostri ospiti, senza nessun codice da inserire.</p>
+          <p class="ferry-note" data-it="Il collegamento porta al portale di Traghettilines, che è un sito esterno con regole proprie su cookie e dati." data-en="The link opens the Traghettilines portal, an external website with its own rules on cookies and data.">Il collegamento porta al portale di Traghettilines, che è un sito esterno con regole proprie su cookie e dati.</p>
+        </div>
+        <a class="btn btn-primary ferry-cta" href="https://traghettilines.it/sc/bbgottardoit" target="_blank" rel="noopener sponsored" data-it="Cerca il traghetto" data-en="Search for a ferry">Cerca il traghetto</a>
+      </div>
   </div>
 </section>
 
@@ -733,11 +755,10 @@ html:not(.js) .reveal{opacity:1;transform:none}
       <button type="button"><img src="images/camera-sole.webp" alt="Camera Sole" width="1400" height="931" loading="lazy"></button>
       <button type="button"><img src="images/bagno-sole.webp" alt="Il bagno con le ceramiche gialle e arancio" width="1200" height="798" loading="lazy"></button>
       <button type="button"><img src="images/camera-letto-rosso.webp" alt="Camera con letto matrimoniale e copriletto rosso" width="1400" height="931" loading="lazy"></button>
-      <button type="button"><img src="images/soggiorno.webp" alt="Il soggiorno con il camino" width="800" height="532" loading="lazy"></button>
       <button type="button" class="wide"><img src="images/giardino-tavolini.webp" alt="I tavolini del giardino sotto l'ombrellone" width="900" height="600" loading="lazy"></button>
       <button type="button"><img src="images/ingresso-camera.webp" alt="Ingresso di una camera con le tende bianche" width="800" height="532" loading="lazy"></button>
       <button type="button"><img src="images/colazione-tavolo.webp" alt="Tavolo della colazione apparecchiato" width="800" height="532" loading="lazy"></button>
-      <button type="button"><img src="images/colazione-giardino.webp" alt="Colazione salata servita in giardino" width="900" height="600" loading="lazy"></button>
+      <button type="button"><img src="images/colazione-giardino.webp" alt="Colazione salata sul tavolo in giardino" width="900" height="600" loading="lazy"></button>
       <button type="button"><img src="images/limoni.webp" alt="Albero di limoni" width="814" height="600" loading="lazy"></button>
       <button type="button"><img src="images/fiori-rosa.webp" alt="Fiori rosa nel giardino" width="900" height="600" loading="lazy"></button>
       <button type="button"><img src="images/giardino-verde.webp" alt="Il verde del cortile interno" width="900" height="600" loading="lazy"></button>
@@ -746,7 +767,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
       <button type="button"><img src="images/cortile-sera.webp" alt="Il cortile illuminato la sera" width="900" height="506" loading="lazy"></button>
       <button type="button"><img src="images/camera-cielo-2.webp" alt="Camera Cielo, dettaglio del letto" width="900" height="600" loading="lazy"></button>
       <button type="button"><img src="images/camera-sole-2.webp" alt="Camera Sole, la parete giallo sole" width="900" height="506" loading="lazy"></button>
-      <button type="button"><img src="images/pane.webp" alt="Pane sardo servito a colazione" width="900" height="506" loading="lazy"></button>
+      <button type="button"><img src="images/pane.webp" alt="Pane sardo per la colazione" width="900" height="506" loading="lazy"></button>
       <button type="button"><img src="images/teiera.webp" alt="Teiera e tazze sul tavolo del cortile" width="900" height="600" loading="lazy"></button>
       <button type="button"><img src="images/ospiti-cortile.webp" alt="Ospiti seduti ai tavolini del cortile" width="900" height="600" loading="lazy"></button>
       <button type="button"><img src="images/margherite.webp" alt="Margherite in fiore nel giardino" width="900" height="600" loading="lazy"></button>
@@ -777,7 +798,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
         <ul>
           <li data-it="Per confermare serve una caparra del 30% dell'importo del soggiorno." data-en="A deposit of 30% of the total stay confirms the booking.">Per confermare serve una caparra del 30% dell'importo del soggiorno.</li>
           <li data-it="La caparra viene rimborsata se la disdetta arriva almeno 10 giorni prima della data di arrivo." data-en="The deposit is refunded if the cancellation arrives at least 10 days before the arrival date.">La caparra viene rimborsata se la disdetta arriva almeno 10 giorni prima della data di arrivo.</li>
-          <li data-it="Si paga in contanti, bonifico, PayPal, bancomat o carta di credito (con spese di gestione)." data-en="Payment by cash, bank transfer, PayPal, debit or credit card (card handling fee applies).">Si paga in contanti, bonifico, PayPal, bancomat o carta di credito (con spese di gestione).</li>
+          <li data-it="Si paga in contanti, bonifico, bancomat o carta di credito (con spese di gestione)." data-en="Payment by cash, bank transfer, debit or credit card (card handling fee applies).">Si paga in contanti, bonifico, bancomat o carta di credito (con spese di gestione).</li>
           <li data-it="Il saldo si versa al momento dell'arrivo." data-en="The balance is paid on arrival.">Il saldo si versa al momento dell'arrivo.</li>
         </ul>
       </div>
@@ -793,8 +814,8 @@ html:not(.js) .reveal{opacity:1;transform:none}
         <h4><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V10l8-6 8 6v11M9 21v-6h6v6"/></svg><span data-it="Pulizie e biancheria" data-en="Cleaning and linen">Pulizie e biancheria</span></h4>
         <ul>
           <li data-it="Il cambio di biancheria e asciugamani si fa ogni 4 giorni, o prima se serve." data-en="Linen and towels are changed every 4 days, or sooner if needed.">Il cambio di biancheria e asciugamani si fa ogni 4 giorni, o prima se serve.</li>
-          <li data-it="Le pulizie si svolgono tra le 10:30 e le 15:00." data-en="Cleaning takes place between 10:30 and 15:00.">Le pulizie si svolgono tra le 10:30 e le 15:00.</li>
-          <li data-it="Non si fuma nelle camere e negli ambienti comuni. In giardino sì." data-en="No smoking in the rooms or in the common areas. Smoking is allowed in the garden.">Non si fuma nelle camere e negli ambienti comuni. In giardino sì.</li>
+          <li data-it="Le pulizie si svolgono tra le 10:00 e le 14:00." data-en="Cleaning takes place between 10:00 and 14:00.">Le pulizie si svolgono tra le 10:00 e le 14:00.</li>
+          <li data-it="Si fuma soltanto nel cortile, nell'area compresa tra il cancelletto e il portone." data-en="Smoking is allowed only in the courtyard, in the area between the gate and the main door.">Si fuma soltanto nel cortile, nell'area compresa tra il cancelletto e il portone.</li>
         </ul>
       </div>
       <div class="info reveal">
@@ -802,7 +823,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
         <ul>
           <li data-it="Informazioni turistiche e consigli sulle spiagge." data-en="Tourist information and advice on the beaches.">Informazioni turistiche e consigli sulle spiagge.</li>
           <li data-it="Mappe della città e orari dei bus di linea." data-en="Town maps and public bus timetables.">Mappe della città e orari dei bus di linea.</li>
-          <li data-it="Due biciclette per il lungomare del Poetto e l'ombrellone da mare." data-en="Two bicycles for the Poetto seafront and a beach umbrella.">Due biciclette per il lungomare del Poetto e l'ombrellone da mare.</li>
+          <li data-it="L'ombrellone per la spiaggia del Poetto." data-en="A beach umbrella for the Poetto.">L'ombrellone per la spiaggia del Poetto.</li>
           <li data-it="Deposito bagagli prima del check in e dopo il check out." data-en="Luggage storage before check in and after check out.">Deposito bagagli prima del check in e dopo il check out.</li>
         </ul>
       </div>
