@@ -899,6 +899,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
         </div>
         <p class="form-err" id="formErr" data-it="Scrivete almeno il vostro nome." data-en="Please write at least your name.">Scrivete almeno il vostro nome.</p>
         <p class="form-note" data-it="Questo modulo non invia niente da solo e non salva nessun dato su questo sito: prepara soltanto il testo del messaggio nella vostra applicazione di posta o in WhatsApp, e l'invio resta una vostra scelta." data-en="This form does not send anything by itself and stores no data on this website: it only prepares the text of the message in your email app or in WhatsApp, and sending it remains your choice.">Questo modulo non invia niente da solo e non salva nessun dato su questo sito: prepara soltanto il testo del messaggio nella vostra applicazione di posta o in WhatsApp, e l'invio resta una vostra scelta.</p>
+        <p class="form-note"><span data-it="I dati che ci inviate sono trattati come descritto nell'" data-en="The data you send us is processed as described in our ">I dati che ci inviate sono trattati come descritto nell'</span><a href="privacy.html" data-it="informativa privacy" data-en="privacy policy">informativa privacy</a>.</p>
       </form>
     </div>
   </div>
@@ -950,13 +951,13 @@ html:not(.js) .reveal{opacity:1;transform:none}
   <button class="lb-close" id="lbClose" aria-label="Chiudi"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
   <button class="lb-prev" id="lbPrev" aria-label="Foto precedente"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
   <button class="lb-next" id="lbNext" aria-label="Foto successiva"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
-  <img id="lbImg" src="" alt="">
+  <img id="lbImg" src="data:," alt="">
   <div class="lb-cap" id="lbCap"></div>
 </div>
 
 <script>
 /* ---------- lingua: i testi stanno nell'HTML, il JS li scambia ---------- */
-let LANG = "it";
+let LANG = location.hash === "#en" ? "en" : "it";
 const $ = s => document.querySelector(s);
 
 function applyLang(){
@@ -973,10 +974,14 @@ function applyLang(){
   document.querySelectorAll(".lang button").forEach(b=>{
     b.classList.toggle("active", b.dataset.lang === LANG);
   });
+  document.querySelectorAll('a[href^="privacy.html"]').forEach(a=>{
+    a.href = LANG === "en" ? "privacy.html#en" : "privacy.html";
+  });
 }
 document.querySelectorAll(".lang button").forEach(b=>{
   b.onclick = () => { LANG = b.dataset.lang; applyLang(); };
 });
+if(LANG === "en") applyLang();
 
 /* ---------- header e menu ---------- */
 const head = $("#head");
